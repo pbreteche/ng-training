@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Training} from './training';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'training-store';
+  title = 'Dawan';
+  training: Training;
+
+  constructor(){
+    this.training = new Training();
+    this.training.title = 'Angular';
+    this.training.price = 1200;
+  }
 }
