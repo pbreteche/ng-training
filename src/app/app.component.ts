@@ -9,6 +9,7 @@ import {Training} from './training';
 export class AppComponent {
   title = 'Dawan';
   trainings: Training[] = [];
+  currentTraining: Training;
 
   constructor() {
     this.trainings.push(new Training());
