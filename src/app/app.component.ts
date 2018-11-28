@@ -8,11 +8,19 @@ import {Training} from './training';
 })
 export class AppComponent {
   title = 'Dawan';
-  training: Training;
+  trainings: Training[] = [];
 
-  constructor(){
-    this.training = new Training();
-    this.training.title = 'Angular';
-    this.training.price = 1200;
+  constructor() {
+    this.trainings.push(new Training());
+    this.trainings[0].title = 'Angular';
+    this.trainings[0].price = 1200;
+
+    this.trainings.push(new Training());
+    this.trainings[1].title = 'HTML';
+    this.trainings[1].price = 800;
+
+    this.trainings.push(new Training());
+    this.trainings[2].title = 'Javascript';
+    this.trainings[2].price = 1000;
   }
 }

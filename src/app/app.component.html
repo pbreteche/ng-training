@@ -3,8 +3,10 @@
   <h1>
     {{ title }}!
   </h1>
+  <div>
 
-  <h2>Formation {{ training.title }}</h2>
-  <p>Super formation, au modeste prix de {{ training.price | currency:'EUR' }}</p>
+  <app-training-detail *ngFor="let training of trainings" [toto]="training"></app-training-detail>
+
+  </div>
 </div>
 
