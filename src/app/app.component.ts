@@ -24,4 +24,9 @@ export class AppComponent {
     this.trainings[2].title = 'Javascript';
     this.trainings[2].price = 1000;
   }
+
+  setCurrent(training: Training): void {
+    this.currentTraining = training;
+  }
+
 }

@@ -9,7 +9,7 @@ import {Training} from '../training';
 export class TrainingDetailComponent implements OnInit {
 
   @Input()
-  toto: Training;
+  training: Training;
 
   constructor() { }
 

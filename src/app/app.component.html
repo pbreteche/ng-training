@@ -3,10 +3,15 @@
   <h1>
     {{ title }}!
   </h1>
-  <div>
-
-  <app-training-detail *ngFor="let training of trainings" [toto]="training"></app-training-detail>
-
+  <div class="training-wrapper">
+    <nav>
+      <app-training-thumbnail
+        *ngFor="let training of trainings"
+        [training]="training"
+        (trainingSelected)="setCurrent($event)"
+      ></app-training-thumbnail>
+    </nav>
+    <app-training-detail [training]="currentTraining"></app-training-detail>
   </div>
 </div>
 
