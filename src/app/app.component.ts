@@ -23,6 +23,13 @@ export class AppComponent {
     this.trainings.push(new Training());
     this.trainings[2].title = 'Javascript';
     this.trainings[2].price = 1000;
+
+    this.currentTraining = this.trainings[0];
+  }
+
+  add(training: Training): void {
+    this.trainings.push(training);
+    this.currentTraining = training;
   }
 
   setCurrent(training: Training): void {

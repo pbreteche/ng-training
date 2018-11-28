@@ -1,0 +1,14 @@
+form > div {
+  margin: 1em;
+}
+
+.ng-invalid.ng-touched:not(form) {
+  box-shadow: 0 0 .5em .5em red;
+}
+
+.error {
+  background-color: pink;
+  color: darkred;
+  padding: .5em 0;
+  border-left: 1ch solid darkred;
+}

@@ -3,6 +3,7 @@
   <h1>
     {{ title }}!
   </h1>
+  <app-training-create (trainingCreated)="add($event)"></app-training-create>
   <div class="training-wrapper">
     <nav>
       <app-training-thumbnail

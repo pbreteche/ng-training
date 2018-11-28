@@ -1,0 +1,12 @@
+<form (submit)="create(trainingForm)" #trainingForm="ngForm">
+  <div>
+    <label for="training-create-title">Titre</label>
+    <input [(ngModel)]="newTraining.title" pattern=".{4,}" #titleField="ngModel" required type="text" id="training-create-title" name="title">
+    <p class="error" *ngIf="titleField.invalid && titleField.touched">S'il te plait, peux-tu mettre un titre d'au moins 4 caractères?</p>
+  </div>
+  <div>
+    <label for="training-create-price">Prix</label>
+    <input [(ngModel)]="newTraining.price" min="0" required type="number" id="training-create-price" name="price">
+  </div>
+  <button [disabled]="trainingForm.form.invalid">Enregistrer</button>
+</form>
